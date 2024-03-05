@@ -2,22 +2,23 @@ const express = require('express');
 const Sequelize = require('sequelize');
 const app = express();
 const session = require('express-session');
-
 const cors = require('cors');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(session({
-    secret: 'your_secret_key', 
-    resave: false,
-    saveUninitialized: true 
+    secret: 'your_secret_key',
+    saveUninitialized: true
 }));
 
-const sequelize = new Sequelize('database', 'username', 'password', {
-    host: '',
-    dialect:'',
+
+const sequelize = new Sequelize({
+    dialect: 'sqlite',
     storage: 'Bookinfo.sqlite'
 });
+
+
 
 const Books =sequelize.define('book',{
     bookid:{
