@@ -4,9 +4,6 @@ const app = express();
 const session = require('express-session');
 
 
-
-
-
 app.use(express.json());
 app.use(session({
     secret: 'your_secret_key', 
@@ -14,8 +11,7 @@ app.use(session({
     saveUninitialized: true 
 }));
 
-const sequelize = new Sequelize('database','username','password',{
-    host:'localhost',
+const sequelize = new Sequelize({
     dialect:'sqlite',
     storage: 'Bookinfo.sqlite'
 });
