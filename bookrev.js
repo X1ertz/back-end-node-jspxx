@@ -51,35 +51,35 @@
 // }).catch(err => {
 //   console.error('Error inserting data:', err);
 // });
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: 'Bookinfo.sqlite'
-});
+// const sequelize = new Sequelize({
+//   dialect: 'sqlite',
+//   storage: 'Bookinfo.sqlite'
+// });
 
-const Type = sequelize.define('type', {
-  typeid: {
-    type: Sequelize.INTEGER,
-    primaryKey: true
-  },
-  type: {
-    type: Sequelize.STRING,
-    allowNull: false
-  }
-});
+// const Type = sequelize.define('type', {
+//   typeid: {
+//     type: Sequelize.INTEGER,
+//     primaryKey: true
+//   },
+//   type: {
+//     type: Sequelize.STRING,
+//     allowNull: false
+//   }
+// });
 
-// เพิ่มข้อมูลลงในตาราง Book
-Type.bulkCreate([
-  { typeid: 1, type: 'Novel' },
-  { typeid: 2, type: 'Comics'},
-  { typeid: 3, type: 'Philosophy books'},
-  { typeid: 4, type: 'English teaching books'},
-  { typeid: 5, type: 'Math teaching books'},
-  { typeid: 6, type: 'Programing teaching books'},
+// // เพิ่มข้อมูลลงในตาราง Book
+// Type.bulkCreate([
+//   { typeid: 1, type: 'Novel' },
+//   { typeid: 2, type: 'Comics'},
+//   { typeid: 3, type: 'Philosophy books'},
+//   { typeid: 4, type: 'English teaching books'},
+//   { typeid: 5, type: 'Math teaching books'},
+//   { typeid: 6, type: 'Programing teaching books'},
 
-]).then(() => {
-  console.log('Data inserted successfully');
-}).catch(err => {
-  console.error('Error inserting data:', err);
-});
+// ]).then(() => {
+//   console.log('Data inserted successfully');
+// }).catch(err => {
+//   console.error('Error inserting data:', err);
+// });
