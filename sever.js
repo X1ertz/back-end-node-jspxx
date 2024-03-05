@@ -13,7 +13,8 @@ app.use(session({
     saveUninitialized: true 
 }));
 
-const sequelize = new Sequelize({
+const sequelize = new Sequelize('database', 'username', 'password', {
+    host: '',
     dialect:'sqlite',
     storage: 'Bookinfo.sqlite'
 });
