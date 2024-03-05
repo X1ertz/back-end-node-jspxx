@@ -15,7 +15,7 @@ app.use(session({
 
 const sequelize = new Sequelize('database', 'username', 'password', {
     host: '',
-    dialect:'sqlite',
+    dialect:'',
     storage: 'Bookinfo.sqlite'
 });
 
