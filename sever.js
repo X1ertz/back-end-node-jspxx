@@ -5,7 +5,6 @@ const session = require('express-session');
 const cors = require('cors');
 
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -168,9 +167,6 @@ app.post("/register", (req, res) => {
         res.status(500).send('There was an error verifying the username.');
     });
 });
-
-
-
 
 
 app.get("/book",(req,res)=>{
