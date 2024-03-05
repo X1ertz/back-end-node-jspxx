@@ -3,9 +3,10 @@ const Sequelize = require('sequelize');
 const app = express();
 const session = require('express-session');
 
-
+const cors = require('cors');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 app.use(session({
     secret: 'your_secret_key', 
     resave: false,
