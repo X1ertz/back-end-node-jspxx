@@ -15,6 +15,7 @@ app.use(session({
 
 
 const sequelize = new Sequelize({
+    host: 'localhost',
     dialect: 'sqlite',
     storage: 'Bookinfo.sqlite'
 });
