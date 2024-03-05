@@ -5,6 +5,7 @@ const session = require('express-session');
 
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(session({
     secret: 'your_secret_key', 
     resave: false,
